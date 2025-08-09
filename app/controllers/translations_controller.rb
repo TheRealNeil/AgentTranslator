@@ -1,6 +1,12 @@
 class TranslationsController < ApplicationController
   def index
     # Main translation interface
+    @source_text = <<~TEXT
+      In a world of code, where dreams take flight, Ruby on Rails shines, a beacon of light.
+      With gems and scripts, we build and create, Web apps that flourish, it's never too late.
+      From models to views, the structure is clear, With each line of code, our vision draws near.
+      So let’s code together, let our passions ignite, In the realm of Rails, everything feels right."
+    TEXT
   end
 
   def create

@@ -17,19 +17,37 @@ Follow these steps to set up and run the app:
    bundle install
    ```
 
-3. **Set up credentials**
-   - You must set your OpenAI API key in the Rails credentials.
-   - Run:
-     ```sh
-     EDITOR="nano" bin/rails credentials:edit
-     ```
-   - Add the following (replace `your-openai-api-key` with your actual key):
-     ```yaml
-     openai:
-       api_key: your-openai-api-key
-     ```
+3. **Set up an LLM**
 
-4. **Run the application**
+   We've setup two LLM providers. OpenAI and Ollam, you only need one to get going.
+
+   a. **Set up OpenAI credentials**
+    - You must set your OpenAI API key in the Rails credentials.
+    - Run:
+      ```sh
+      EDITOR="nano" bin/rails credentials:edit
+      ```
+    - Add the following (replace `your-openai-api-key` with your actual key):
+      ```yaml
+      openai:
+        api_key: your-openai-api-key
+      ```
+   b. **Set up Ollama on your local machine**
+
+   To use the gemma3:latest model locally via Ollama:
+    - Install Ollama
+      Follow the instructions at https://ollama.com/download to install Ollama for your operating system.
+    - Start Ollama
+   ```
+   ollama serve
+   ```
+    - Pull the gemma3:latest model
+   ```
+   ollama pull gemma3:latest
+   ```
+   Refer to the Ollama documentation for more details.
+
+5. **Run the application**
    ```sh
    bin/dev
    ```

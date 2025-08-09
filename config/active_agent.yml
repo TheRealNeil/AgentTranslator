@@ -1,4 +1,9 @@
 development:
+  ollama:
+    service: "Ollama"
+    host: "http://localhost:11434"
+    model: "gemma3:latest"
+    temperature: 0.7
   openai:
     service: "OpenAI"
     api_key: <%= Rails.application.credentials.dig(:openai, :api_key) %>

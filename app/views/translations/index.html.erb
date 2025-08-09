@@ -1,3 +1,5 @@
+<%= turbo_stream_from "translation_agent_messages" %>
+
 <div class="container">
   <h1>Translation Tool</h1>
 
@@ -27,7 +29,7 @@
 
     <div class="form-group">
       <%= form.label :source_text, "Text to Translate" %>
-      <%= form.text_area :source_text, value: @source_text, placeholder: "Enter text to translate...", class: "form-control", rows: 6, required: true %>
+      <%= form.text_area :source_text, value: @source_text, placeholder: "Enter text to translate...", class: "form-control", rows: 8, required: true %>
     </div>
 
     <div class="form-actions">
